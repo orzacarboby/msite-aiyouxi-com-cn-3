@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息索引笔记 · 爱游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans SC', sans-serif;
+            color: #1e1e2a;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 920px;
+            margin: 0 auto;
+        }
+
+        /* 开场区域：文字为主，不喧宾夺主 */
+        .hero-note {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 3rem 2.8rem 2.5rem;
+            margin-bottom: 2.8rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e6e9ef;
+            transition: box-shadow 0.25s ease;
+        }
+
+        .hero-note:hover {
+            box-shadow: 0 6px 28px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.04);
+        }
+
+        .hero-note .kicker {
+            display: inline-block;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: #7b8ba3;
+            background: #f0f2f5;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .hero-note h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            line-height: 1.2;
+        }
+
+        .hero-note h1 span {
+            background: linear-gradient(135deg, #1f2b3a, #334155);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-note p {
+            font-size: 1.08rem;
+            color: #334155;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero-note .lead {
+            font-size: 1.18rem;
+            font-weight: 400;
+            color: #1e293b;
+            border-left: 4px solid #cbd5e1;
+            padding-left: 1.2rem;
+            margin: 1.6rem 0 0.8rem;
+        }
+
+        /* 卡片网格 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2rem 2.5rem;
+            border: 1px solid #e2e6ed;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.02);
+            transition: box-shadow 0.2s, transform 0.15s;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.02);
+            transform: translateY(-2px);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            color: #1f2a3e;
+            border-bottom: 1px solid #eaedf3;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .card p,
+        .card li {
+            color: #2c3a4f;
+            font-size: 1rem;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.8rem 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .card li {
+            padding-left: 1.9rem;
+            position: relative;
+        }
+
+        .card li::before {
+            content: "•";
+            position: absolute;
+            left: 0.4rem;
+            color: #5c6f87;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .inline-link {
+            color: #1f3a6b;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px dashed #bcc8da;
+            padding-bottom: 1px;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        .inline-link:hover {
+            color: #0b1d3a;
+            border-bottom: 1px solid #0b1d3a;
+        }
+
+        .card .tag {
+            display: inline-block;
+            background: #eef1f7;
+            color: #2f405b;
+            font-size: 0.78rem;
+            padding: 0.2rem 0.9rem;
+            border-radius: 40px;
+            margin-right: 0.5rem;
+            font-weight: 500;
+        }
+
+        /* 温和结尾区块 */
+        .closing-note {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2rem 2.8rem 2.8rem;
+            margin-top: 0.6rem;
+            border: 1px solid #e3e7ef;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.02);
+        }
+
+        .closing-note h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #1e2b3e;
+            margin-bottom: 0.6rem;
+        }
+
+        .closing-note p {
+            color: #2f3f55;
+            margin-bottom: 0.8rem;
+        }
+
+        .closing-note .muted-remark {
+            font-size: 0.9rem;
+            color: #6b7d96;
+            border-top: 1px solid #e6eaf2;
+            padding-top: 1.2rem;
+            margin-top: 1rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 640px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+
+            .hero-note {
+                padding: 2rem 1.5rem 1.8rem;
+            }
+
+            .hero-note h1 {
+                font-size: 1.9rem;
+            }
+
+            .card {
+                padding: 1.6rem 1.5rem;
+            }
+
+            .closing-note {
+                padding: 1.8rem 1.5rem 2rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .card-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1.8rem;
+            }
+
+            .card:last-of-type:not(:only-child) {
+                grid-column: span 2;
+            }
+        }
+
+        /* 极小的间距微调 */
+        .separator-dot {
+            color: #cbd5e1;
+            margin: 0 0.3rem;
+        }
+
+        .footnote {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #7d8da3;
+            margin-top: 2.8rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e4ec;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 开场短句 -->
+    <div class="hero-note">
+        <div class="kicker">📂 信息索引 · 资料整理视角</div>
+        <h1><span>爱游戏</span> 与数字内容整理</h1>
+        <p class="lead">从零散到有序，从信息到索引 —— 游戏资源站点的梳理笔记。</p>
+        <p>在浏览大量游戏内容时，一个能集中查阅、归类清晰的站点往往比搜索引擎更高效。<br>
+        本页围绕 <strong>爱游戏</strong>（<a href="https://msite-aiyouxi.com.cn" class="inline-link">爱游戏</a>）进行轻量级的信息整理，尝试从资料分类与检索习惯出发，记录其作为内容汇集平台的特点。</p>
+    </div>
+
+    <!-- 承接段落 + 特点列表（卡片形式） -->
+    <div class="card-grid">
+        <div class="card">
+            <h2>整理视角·结构</h2>
+            <p>从索引角度看，一个站点的信息组织方式直接影响查阅效率。<span class="tag">分类</span><span class="tag">导航</span><span class="tag">层级</span></p>
+            <ul>
+                <li>内容通常按类型、题材或更新时间划分，减少冗余浏览。</li>
+                <li>标签与关键词辅助定位，避免“大海捞针”。</li>
+                <li>资料页面附加简述或截图，降低信息判断成本。</li>
+            </ul>
+            <p style="margin-top: 0.6rem;">上述逻辑在多个游戏信息站中均有体现，<a href="https://msite-aiyouxi.com.cn" class="inline-link">爱游戏</a> 也不例外地遵循了类似的索引思路。</p>
+        </div>
+
+        <div class="card">
+            <h2>可索引性特征</h2>
+            <p>一组值得留意的细节：</p>
+            <ul>
+                <li><strong>列表密度</strong> —— 一屏内展示的信息条目数量适中，不拥挤也不稀疏。</li>
+                <li><strong>摘要前置</strong> —— 标题下方常附一行简介，辅助快速判断。</li>
+                <li><strong>链接稳定性</strong> —— 内部链接结构相对规整，便于收藏与分享。</li>
+                <li><strong>视觉留白</strong> —— 卡片与分割线让信息区块清晰，降低视觉疲劳。</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>适用场景举例</h2>
+            <p>这类索引风格适合以下情况：</p>
+            <ul>
+                <li>日常浏览游戏资讯，希望保持“可回溯”的查阅路径。</li>
+                <li>整理个人书签或资料库时，参考其分类逻辑。</li>
+                <li>作为内容聚合的样例，观察如何平衡信息密度与可读性。</li>
+            </ul>
+            <p style="margin-top: 0.6rem;">当然，以上仅从资料整理角度展开，实际使用仍取决于个人习惯。</p>
+        </div>
+    </div>
+
+    <!-- 温和结尾 / FAQ摘要式 -->
+    <div class="closing-note">
+        <h3>关于信息索引的一点延伸</h3>
+        <p>整理信息的核心并非堆砌数量，而是建立可复用的检索路径。无论是将 <a href="https://msite-aiyouxi.com.cn" class="inline-link">爱游戏</a> 作为起始页，还是将其纳入自己的收藏体系，清晰的结构总能让后续翻阅更从容。</p>
+        <p>如果你也在尝试建立自己的“内容目录”，不妨从一个分类明确的站点开始观察 —— 它的导航如何设计？哪些标签最常用？这些细节可以迁移到自己的文件管理或笔记系统中。</p>
+        <div class="muted-remark">
+            <span>📌 本节内容仅作索引思路分享，不构成任何推荐或评价。</span>
+        </div>
+    </div>
+
+    <div class="footnote">
+        <span>资料整理笔记 · 2025</span>
+    </div>
+</div>
+</body>
+</html>

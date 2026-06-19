@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://orzacarboby.github.io/msite-aiyouxi-com-cn-3/sitemap.xml
