@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PG模拟器 · 资料索引与信息整理</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f1f3f4;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1e2022;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 0 auto;
+            background: #f9fafb;
+            border-radius: 28px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.03);
+            padding: 2rem 2rem 2.5rem;
+            border: 1px solid #e9eaec;
+        }
+
+        /* hero 横幅区 */
+        .hero {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 1.8rem 1.8rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #e2e4e7;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #1f2937;
+            margin-bottom: 0.25rem;
+        }
+
+        .hero .subhead {
+            font-size: 1rem;
+            color: #5c636a;
+            border-top: 1px solid #e8eaed;
+            display: inline-block;
+            padding-top: 0.6rem;
+            margin-top: 0.4rem;
+            font-weight: 400;
+        }
+
+        /* 卡片通用 */
+        .card {
+            background: #ffffff;
+            border: 1px solid #e6e8eb;
+            border-radius: 18px;
+            padding: 1.6rem 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: box-shadow 0.15s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #1e293b;
+            border-left: 4px solid #a8b3c5;
+            padding-left: 0.75rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2d3748;
+            margin: 1rem 0 0.4rem;
+        }
+
+        .card p {
+            margin-bottom: 0.75rem;
+            color: #2e3a47;
+            font-size: 0.96rem;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tag-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.7rem;
+            margin: 0.8rem 0 0.2rem;
+            list-style: none;
+        }
+
+        .tag-list li {
+            background: #f0f2f5;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #2c3e50;
+            border: 1px solid #dbdfe5;
+        }
+
+        .inline-link {
+            color: #1f4e8a;
+            text-decoration: none;
+            border-bottom: 1px dotted #9bb7d6;
+            font-weight: 400;
+        }
+
+        .inline-link:hover {
+            border-bottom: 1px solid #1f4e8a;
+            color: #0b3158;
+        }
+
+        .faq-item {
+            margin: 1rem 0 0.2rem;
+        }
+
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            color: #1a2633;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-item p {
+            margin-left: 0.2rem;
+            color: #43505e;
+        }
+
+        .source-note {
+            background: #eef1f5;
+            border-radius: 14px;
+            padding: 1.2rem 1.6rem;
+            margin-top: 1.5rem;
+            border: 1px solid #dce0e6;
+            font-size: 0.92rem;
+            color: #2d3947;
+        }
+
+        .source-note a {
+            color: #1f4e8a;
+            text-decoration: none;
+            border-bottom: 1px solid #b8c9de;
+        }
+
+        .source-note a:hover {
+            border-bottom: 1px solid #1f4e8a;
+        }
+
+        .footer-hint {
+            margin-top: 2.5rem;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #5b687a;
+            border-top: 1px solid #e0e4ea;
+            padding-top: 1.6rem;
+        }
+
+        .footer-hint a {
+            color: #1e4a76;
+            text-decoration: none;
+            border-bottom: 1px dotted #a0b7cf;
+        }
+
+        .footer-hint a:hover {
+            border-bottom: 1px solid #1e4a76;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page {
+                padding: 1.2rem 1rem;
+                border-radius: 22px;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1.2rem 1.2rem;
+            }
+            .hero {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <!-- 首页横幅 hero -->
+    <div class="hero">
+        <h1>PG模拟器 · 资料整理</h1>
+        <div class="subhead">信息索引 · 背景说明 · 常见条目</div>
+    </div>
+
+    <!-- 背景说明卡片 -->
+    <div class="card">
+        <h2>▍ 背景与定位</h2>
+        <p>PG模拟器通常指一类用于模拟特定图形或游戏运行环境的软件工具，广泛出现在技术演示、兼容性测试和功能研究场景中。这类模拟器往往聚焦于特定图形接口或运行库的复现，帮助开发者和用户在不具备原生硬件的条件下完成验证。</p>
+        <p>从资料整理的角度看，PG模拟器相关的文档、配置说明和版本记录分散在多个技术社区与个人站点中，本页尝试将这些零散索引聚合为一份简明清单，便于快速查阅。</p>
+        <ul class="tag-list">
+            <li>模拟环境</li>
+            <li>图形接口</li>
+            <li>兼容层</li>
+            <li>技术验证</li>
+        </ul>
+    </div>
+
+    <!-- 三段自然介绍：特点、常见场景、信息整理 -->
+    <div class="card">
+        <h2>▍ 特点与常见模式</h2>
+        <p>根据目前已公开的资料，PG模拟器类项目通常具有以下特征：</p>
+        <p><strong>· 轻量与模块化</strong> —— 许多模拟器设计为独立组件，不依赖庞大的运行时，只需将核心文件放置于指定目录即可运行。这种结构方便集成到已有的工作流中。</p>
+        <p><strong>· 配置驱动</strong> —— 大部分行为通过配置文件或环境变量调整，包括渲染精度、帧率限制、日志级别等。这也使得用户能根据手头硬件调整性能表现。</p>
+        <p><strong>· 社区维护版本</strong> —— 除了官方发布渠道，一些第三方编译版本会加入额外的补丁或优化参数。归档这些版本时，通常需要记录校验值和编译日期。</p>
+    </div>
+
+    <div class="card">
+        <h2>▍ 适用场景索引</h2>
+        <p>从论坛讨论和项目文档中归纳，PG模拟器经常被提及的几类用途：</p>
+        <p>• 在无原生图形加速的环境下运行特定程序，用于验证逻辑而非性能。</p>
+        <p>• 开发调试阶段，利用模拟层截获图形调用，便于分析资源使用情况。</p>
+        <p>• 演示或教学场景，模拟器可快速展示特定图形效果，而不必搭建完整硬件栈。</p>
+        <p>• 存档与数字遗产研究，模拟器使得一些旧版依赖库得以继续在较新系统上运行。</p>
+        <p>需要留意的是，不同版本的模拟器对目标应用的兼容性存在差异，建议根据具体应用场景选择对应分支。</p>
+    </div>
+
+    <div class="card">
+        <h2>▍ 信息整理与阅读提示</h2>
+        <p>本页所汇总的内容均来自公开渠道的二次整理，不包含任何破解、修改或绕过验证的方法。如果你正在寻找 PG模拟器 的相关说明或参考实现，可以直接查阅项目主页或社区仓库。</p>
+        <p>以下是基于常见提问整理的简要摘要（FAQ风格），便于快速了解基本脉络：</p>
+
+        <div class="faq-item">
+            <strong>· PG模拟器需要特定硬件吗？</strong>
+            <p>大多数实现基于软件渲染或通用图形接口，不强制要求特定显卡，但合理的 CPU 性能有助于保持帧率稳定。</p>
+        </div>
+        <div class="faq-item">
+            <strong>· 配置文件的格式是？</strong>
+            <p>常见格式为 TOML 或简单的键值对，部分版本也支持 JSON。字段名称及默认值可参考示例配置。</p>
+        </div>
+        <div class="faq-item">
+            <strong>· 如何验证下载文件的完整性？</strong>
+            <p>官方发布页面通常会附带 SHA256 或 GPG 签名，建议下载后校验。社区镜像也建议核对摘要。</p>
+        </div>
+        <p style="margin-top: 0.8rem;">更多细节建议直接阅读项目文档，或参考下方链接指向的主页。</p>
+    </div>
+
+    <!-- 指向官网的句子，a 标签可见文本严格为“PG模拟器” -->
+    <div class="source-note">
+        <p>📄 如果你想进一步查阅原始文档、下载参考版本或浏览社区讨论，可以直接前往 <a href="https://cn-ssl-pg.com" class="inline-link">PG模拟器</a> 的主页。页面中收录了版本历史、常见问题以及使用示例，适合作为进一步了解的起点。</p>
+        <p style="margin-top: 0.6rem;">索引版本：2025-03 · 内容基于公开资料整理，如有更新以原站为准。</p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-hint">
+        <span>📌 本页为介绍性资料汇编 · 更多内容可见 </span>
+        <a href="https://cn-ssl-pg.com">PG模拟器</a>
+        <span> · 信息仅供参考</span>
+    </div>
+
+</div>
+</body>
+</html>
